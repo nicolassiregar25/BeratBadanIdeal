@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logo"
+                android:layout_marginTop="70dp"
+                android:id="@+id/logo"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/textjeniskelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="60dp"
+                android:letterSpacing="0.1"
+                android:text="Jenis Kelamin: "
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutjeniskelamin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="60dp"
+                android:layout_below="@id/textjeniskelamin">
+
+                <RadioGroup
+                    android:id="@+id/jeniskelamin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/lakilaki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="Laki-laki" />
+
+                    <RadioButton
+                        android:id="@+id/perempuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Perempuan" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textnama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutjeniskelamin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:letterSpacing="0.1"
+                android:text="Nama: "
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textnama"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="Masukkan nama"
+                android:inputType="text"
+                android:letterSpacing="0.1"
+                android:textColorHint="@color/grey"
+                tools:ignore="AutoFill" />
+
+            <TextView
+                android:id="@+id/textusia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nama"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:letterSpacing="0.1"
+                android:text="Usia: "
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/usia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textusia"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="Masukkan usia"
+                android:inputType="number"
+                android:letterSpacing="0.1"
+                android:textColorHint="@color/grey"
+                tools:ignore="AutoFill" />
+
+            <TextView
+                android:id="@+id/textbb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usia"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:letterSpacing="0.1"
+                android:text="Berat Badan: "
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/bb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textbb"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="Masukkan berat badan"
+                android:inputType="number"
+                android:letterSpacing="0.1"
+                android:textColorHint="@color/grey"
+                tools:ignore="AutoFill" />
+
+            <TextView
+                android:id="@+id/texttb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bb"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:letterSpacing="0.1"
+                android:text="Tinggi Badan: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tbvalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/texttb"
+                android:letterSpacing="0.1"
+                android:text="100"
+                android:textSize="16sp" />
+
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbvalue"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="38dp"
+                android:max="100" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seekBar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:letterSpacing="0.1"
+                android:paddingLeft="15dp"
+                android:text="Data yang dimasukkan sudah benar"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/checkbox"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="bt_submit"
+                android:text="Submit"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
